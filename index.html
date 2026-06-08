@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مذكر الجغرافي الذكي | Geo-Reminder</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="sidebar">
+            <h2>📌 التذكيرات الجغرافية</h2>
+            <p class="instruction">انقر على أي مكان في الخريطة لإضافة تذكير جديد في ذلك الموقع.</p>
+            
+            <div id="reminder-form" class="hidden">
+                <h3>إضافة تذكير جديد</h3>
+                <input type="text" id="reminder-text" placeholder="ماذا تريد أن تفعل هناك؟">
+                <label for="reminder-radius">نطاق التنبيه (بالأمتار):</label>
+                <input type="number" id="reminder-radius" value="200" min="50" max="2000">
+                <button id="save-btn">حفظ التذكير</button>
+                <button id="cancel-btn" class="secondary">إلغاء</button>
+            </div>
+
+            <ul id="reminders-list">
+                </ul>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
